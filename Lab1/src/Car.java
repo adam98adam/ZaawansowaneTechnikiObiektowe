@@ -4,6 +4,8 @@ public class Car extends Device{
     final String model;
     final String producer;
 
+    Double price;
+
     public Car(String model, String producer) {
         this.model = model;
         this.producer = producer;

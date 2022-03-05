@@ -3,7 +3,7 @@ import java.util.Date;
 
 public class Human {
     Animal pet;
-    Car car;
+    private Car car;
     private Double salary;
 
     public Double getSalary() {
@@ -26,5 +26,15 @@ public class Human {
 
     public Car getCar() { return car; }
 
-    public void setCar(Car car) { this.car = car; }
+    public void setCar(Car car) {
+        if(this.salary > car.price) {
+            System.out.println("Udalo sie kupic auto za gotowke");
+            this.car = car;
+        } else if(this.salary > (car.price/12)) {
+            System.out.println("Udalo sie kupic auto na kredyt");
+            this.car = car;
+        } else {
+            System.out.println("Znajdz lepsza prace bo bieda czlowieniu");
+        }
+    }
 }
