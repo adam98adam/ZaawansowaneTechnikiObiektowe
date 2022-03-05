@@ -1,17 +1,13 @@
 package lab1;
 
-import lab1.Animal;
-import lab1.Human;
+import lab1.creatures.Pet;
 import lab1.devices.Car;
 
 public class Main {
     public static void main(String[] args) {
-        Animal animal = new Animal("mammal");
-        int x = 0;
-        while(x < 11) {
-            animal.takeForAWALK();
-            x++;
-        }
+
+        Pet pet = new Pet("123");
+        System.out.println(pet);
 
         Human human = new Human();
         human.setSalary(10000.0);

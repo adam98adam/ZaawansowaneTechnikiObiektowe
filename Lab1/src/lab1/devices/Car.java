@@ -1,7 +1,7 @@
 package lab1.devices;
 
 import lab1.Human;
-import lab1.Salleable;
+import lab1.creatures.Salleable;
 import lab1.device.Device;
 
 import java.util.Objects;

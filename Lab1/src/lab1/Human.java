@@ -1,6 +1,6 @@
 package lab1;
 
-import lab1.Animal;
+import lab1.creatures.Animal;
 import lab1.devices.Car;
 import lab1.devices.Phone;
 
