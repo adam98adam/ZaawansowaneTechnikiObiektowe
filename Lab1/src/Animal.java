@@ -33,4 +33,12 @@ public class Animal {
             System.out.println("Zdechl !!!! Nie ma czego wyprowadzac na spacer 🙂");
         }
     }
+
+    @Override
+    public String toString() {
+        return "Animal{" +
+                "speceis='" + species + '\'' +
+                ", weight='" + weight + '\'' +
+                '}';
+    }
 }

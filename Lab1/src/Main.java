@@ -1,3 +1,5 @@
+import devices.Car;
+
 public class Main {
     public static void main(String[] args) {
         Animal animal = new Animal("mammal");
@@ -8,7 +10,10 @@ public class Main {
         }
 
         Human human = new Human();
-        Car car = new Car("X7", "BMW");
+        human.setSalary(10000.0);
+        Car car = new Car("X7", "BMW", 2000.0);
         human.setCar(car);
+
+        System.out.println(human);
     }
 }

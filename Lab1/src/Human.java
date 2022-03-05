@@ -1,3 +1,5 @@
+import devices.Car;
+
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
@@ -27,14 +29,24 @@ public class Human {
     public Car getCar() { return car; }
 
     public void setCar(Car car) {
-        if(this.salary > car.price) {
+        if(this.salary > car.getPrice()) {
             System.out.println("Udalo sie kupic auto za gotowke");
             this.car = car;
-        } else if(this.salary > (car.price/12)) {
+        } else if(this.salary > (car.getPrice()/12)) {
             System.out.println("Udalo sie kupic auto na kredyt");
             this.car = car;
         } else {
             System.out.println("Znajdz lepsza prace bo bieda czlowieniu");
         }
+    }
+
+
+    @Override
+    public String toString() {
+        return "Human{" +
+                "pet='" + pet + '\'' +
+                ", car='" + car + '\'' +
+                ", salary='" + salary + '\'' +
+                '}';
     }
 }
