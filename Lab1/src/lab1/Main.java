@@ -1,4 +1,8 @@
-import devices.Car;
+package lab1;
+
+import lab1.Animal;
+import lab1.Human;
+import lab1.devices.Car;
 
 public class Main {
     public static void main(String[] args) {

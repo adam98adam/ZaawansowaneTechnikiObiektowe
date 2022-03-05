@@ -1,10 +1,12 @@
-package devices;
+package lab1.devices;
 
-import device.Device;
+import lab1.Human;
+import lab1.Salleable;
+import lab1.device.Device;
 
 import java.util.Objects;
 
-public class Car extends Device{
+public class Car extends Device implements Salleable {
 
     final String model;
     final String producer;
@@ -25,7 +27,7 @@ public class Car extends Device{
 
     @Override
     public String toString() {
-        return "devices.Car{" +
+        return "lab1.devices.Car{" +
                 "model='" + model + '\'' +
                 ", producer='" + producer + '\'' +
                 ", price='" + price + '\'' +
@@ -55,4 +57,20 @@ public class Car extends Device{
     public Double getPrice() { return price; }
 
     public void setPrice(Double price) { this.price = price; }
+
+    @Override
+    public void sell(Human seller, Human buyer, Double price) {
+        if(seller.getCar() != null) {
+            if(buyer.getCash() >= price) {
+                buyer.setCash(buyer.getCash() - price);
+                seller.setCash(seller.getCash() + price);
+                buyer.setCar(seller.getCar());
+                seller.setCar(null);
+            } else {
+                System.out.println("Kupujacy ma za malo pieniedzy !!!");
+            }
+        } else {
+            System.out.println("Sprzedajacy nie posiada telefounu !!!");
+        }
+    }
 }

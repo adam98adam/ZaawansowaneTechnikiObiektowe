@@ -1,4 +1,6 @@
-public class Animal {
+package lab1;
+
+public class Animal implements Salleable {
     final String species;
     private Double weight;
 
@@ -36,9 +38,26 @@ public class Animal {
 
     @Override
     public String toString() {
-        return "Animal{" +
+        return "lab1.Animal{" +
                 "speceis='" + species + '\'' +
                 ", weight='" + weight + '\'' +
                 '}';
+    }
+
+    @Override
+    public void sell(Human seller, Human buyer, Double price) {
+        if(seller.getPet() != null) {
+            if(buyer.getCash() >= price) {
+                buyer.setCash(buyer.getCash() - price);
+                seller.setCash(seller.getCash() + price);
+                buyer.setPet(seller.getPet());
+                seller.setPet(null);
+            } else {
+                System.out.println("Kupujacy ma za malo pieniedzy !!!");
+            }
+        } else {
+            System.out.println("Sprzedajacy nie posiada telefounu !!!");
+        }
+
     }
 }

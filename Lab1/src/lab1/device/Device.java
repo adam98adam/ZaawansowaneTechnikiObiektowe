@@ -1,4 +1,4 @@
-package device;
+package lab1.device;
 
 public abstract class Device {
     String producer;

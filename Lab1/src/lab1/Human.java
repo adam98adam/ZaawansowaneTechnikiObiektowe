@@ -1,10 +1,16 @@
-import devices.Car;
+package lab1;
+
+import lab1.Animal;
+import lab1.devices.Car;
+import lab1.devices.Phone;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-public class Human {
+public class Human{
     Animal pet;
+    Double cash;
+    Phone phone;
     private Car car;
     private Double salary;
 
@@ -40,11 +46,23 @@ public class Human {
         }
     }
 
+    public Animal getPet() { return pet; }
+
+    public void setPet(Animal pet) { this.pet = pet; }
+
+    public Double getCash() { return cash; }
+
+    public void setCash(Double cash) { this.cash = cash; }
+
+    public Phone getPhone() { return phone; }
+
+    public void setPhone(Phone phone) { this.phone = phone; }
 
     @Override
     public String toString() {
-        return "Human{" +
+        return "lab1.Human{" +
                 "pet='" + pet + '\'' +
+                ", cash='" + cash + '\'' +
                 ", car='" + car + '\'' +
                 ", salary='" + salary + '\'' +
                 '}';
