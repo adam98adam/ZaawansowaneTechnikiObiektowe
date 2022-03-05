@@ -1,9 +1,15 @@
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 public class Human {
     Animal pet;
     Car car;
     private Double salary;
 
     public Double getSalary() {
+        SimpleDateFormat dt = new SimpleDateFormat("dd-MMM-yyyy HH:mm");
+        System.out.println("Dane zostaly pobrane : " + dt.format(new Date()));
+        System.out.println("Wartość przed zwróceniem wartosci : " + salary);
         return salary;
     }
 
