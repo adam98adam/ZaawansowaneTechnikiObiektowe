@@ -1,5 +1,6 @@
 public class Human {
     Animal pet;
+    Car car;
     private Double salary;
 
     public Double getSalary() {
@@ -16,4 +17,8 @@ public class Human {
         System.out.println("ZUS i US już wiedzą o zmianie wypłaty i nie ma sensu ukrywać dochodu");
         this.salary = salary;
     }
+
+    public Car getCar() { return car; }
+
+    public void setCar(Car car) { this.car = car; }
 }

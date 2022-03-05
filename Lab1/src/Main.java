@@ -6,5 +6,9 @@ public class Main {
             animal.takeForAWALK();
             x++;
         }
+
+        Human human = new Human();
+        Car car = new Car("X7", "BMW");
+        human.setCar(car);
     }
 }
