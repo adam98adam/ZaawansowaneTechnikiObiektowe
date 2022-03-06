@@ -6,12 +6,15 @@ import lab1.device.Device;
 
 import java.util.Objects;
 
-public class Car extends Device implements Salleable {
+public abstract class Car extends Device implements Salleable {
 
     final String model;
     final String producer;
 
     Double price;
+    Double fuelAmount;
+    Double fuelCapacity;
+
 
     public Car(String model, String producer, Double price) {
         this.model = model;
@@ -58,6 +61,16 @@ public class Car extends Device implements Salleable {
 
     public void setPrice(Double price) { this.price = price; }
 
+    public Double getFuelAmount() { return fuelAmount; }
+
+    public void setFuelAmount(Double fuelAmount) { this.fuelAmount = fuelAmount; }
+
+    public Double getFuelCapacity() { return fuelCapacity; }
+
+    public void setFuelCapacity(Double fuelCapacity) {
+        this.fuelCapacity = fuelCapacity;
+    }
+
     @Override
     public void sell(Human seller, Human buyer, Double price) {
         if(seller.getCar() != null) {
@@ -73,4 +86,6 @@ public class Car extends Device implements Salleable {
             System.out.println("Sprzedajacy nie posiada telefounu !!!");
         }
     }
+
+    public abstract void refuel();
 }
